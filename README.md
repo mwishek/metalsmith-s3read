@@ -17,7 +17,8 @@ var metalsmith = new Metalsmith(__dirname)
   .use(s3({
     action: 'copy',
     bucket: 's3-bucket-dest',
-    from: 's3-bucket-src',
+    from:   's3-bucket-src',
+    acl:    'public-read',
     prefix: ['images/', 'js/']
   }));
   .use(s3({
@@ -28,7 +29,8 @@ var metalsmith = new Metalsmith(__dirname)
   ...
   .use(s3({
     action: 'write',
-    bucket: 's3-bucket-dest'
+    bucket: 's3-bucket-dest',
+    acl:    'public-read'
   }));
 ```
 ### S3 Library Pass Through
@@ -38,7 +40,7 @@ Properties available vary based on the chosen action:
   - [copy](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#copyObject-property)
   - [write](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property)
 
-Example to set the ACL for files written to s3:
+Example to set custom metadata for files written to S3:
 ```node
 var Metalsmith = require('metalsmith');
 var s3 = require('metalsmith-s3');
@@ -48,8 +50,9 @@ var metalsmith = new Metalsmith(__dirname)
   .use(s3({
     action: 'write',
     bucket: 's3-bucket-dest'
-    s3: {
-      ACL: 'public-read'
+    Metadata: {
+     'key1': 'value1', 
+     'key2': 'value2'
     }
   }));
 ```
@@ -87,7 +90,8 @@ The _copy_ action will copy files from a source S3 bucket to a destination S3 bu
 
 bucket: destination S3 bucket  
 from: source S3 bucket  
-prefix: a prefix or array of prefixes to be copied from the source S3 bucket  
+prefix: a prefix or array of prefixes to be copied from the source S3 bucket
+acl: name of a canned ACL to use when writing files (optional) 
 region: bucket's endpoint region (optional)
 
 ### Write
@@ -98,6 +102,7 @@ The _write_ action will write all files to the destination S3 bucket.
 
 bucket: destination S3 bucket  
 region: bucket's endpoint region (optional)
+acl: name of a canned ACL to use when writing files (optional)
 
 #### Mime Types
 
