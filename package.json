@@ -1,28 +1,54 @@
 {
-  "name": "metalsmith-s3",
-  "version": "0.1.0",
-  "description": "A Metalsmith.io plugin to integrate with AWS S3",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mwishek/metalsmith-s3"
-  },
-  "keywords": [
-    "package",
-    "Metalsmith.io",
-    "S3",
-    "Amazon",
-    "AWS"
+  "_args": [
+    [
+      {
+        "raw": "metalsmith-s3@^0.0.1",
+        "scope": null,
+        "escapedName": "metalsmith-s3",
+        "name": "metalsmith-s3",
+        "rawSpec": "^0.0.1",
+        "spec": ">=0.0.1 <0.0.2",
+        "type": "range"
+      },
+      "/home/ubuntu/nonlinear.build"
+    ]
   ],
-  "author": "Matthew Wishek",
-  "license": "MIT",
+  "_from": "metalsmith-s3@>=0.0.1 <0.0.2",
+  "_id": "metalsmith-s3@0.0.1",
+  "_inCache": true,
+  "_location": "/metalsmith-s3",
+  "_nodeVersion": "0.10.35",
+  "_npmUser": {
+    "name": "mwishek",
+    "email": "mwishek@gmail.com"
+  },
+  "_npmVersion": "2.1.16",
+  "_phantomChildren": {
+    "ms": "2.0.0"
+  },
+  "_requested": {
+    "raw": "metalsmith-s3@^0.0.1",
+    "scope": null,
+    "escapedName": "metalsmith-s3",
+    "name": "metalsmith-s3",
+    "rawSpec": "^0.0.1",
+    "spec": ">=0.0.1 <0.0.2",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/metalsmith-s3/-/metalsmith-s3-0.0.1.tgz",
+  "_shasum": "06a58d630e93a1296672249cd2c83acdb4686214",
+  "_shrinkwrap": null,
+  "_spec": "metalsmith-s3@^0.0.1",
+  "_where": "/home/ubuntu/nonlinear.build",
+  "author": {
+    "name": "Matthew Wishek"
+  },
   "bugs": {
     "url": "https://github.com/mwishek/metalsmith-s3/issues"
   },
-  "homepage": "https://github.com/mwishek/metalsmith-s3",
   "dependencies": {
     "async": "^0.9.0",
     "aws-sdk": "^2.1.7",
@@ -30,13 +56,49 @@
     "front-matter": "^0.2.1",
     "mime": "^1.2.11",
     "mime-types": "^2.0.7",
+    "mkdirp": "^0.5.1",
+    "rsvp": "^3.0.16",
     "underscore": "^1.6.0"
   },
+  "description": "A Metalsmith.io plugin to integrate with AWS S3",
   "devDependencies": {
     "assert-dir-equal": "0.0.1",
     "handlebars": "^2.0.0-alpha.4",
     "metalsmith": "^0.9.0",
     "metalsmith-templates": "^0.5.2",
     "mocha": "^1.21.3"
-  }
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "06a58d630e93a1296672249cd2c83acdb4686214",
+    "tarball": "https://registry.npmjs.org/metalsmith-s3/-/metalsmith-s3-0.0.1.tgz"
+  },
+  "gitHead": "f044541c172677cfb47697c75066bdc8ccda78a0",
+  "homepage": "https://github.com/mwishek/metalsmith-s3",
+  "keywords": [
+    "package",
+    "Metalsmith.io",
+    "S3",
+    "Amazon",
+    "AWS"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "mwishek",
+      "email": "mwishek@gmail.com"
+    }
+  ],
+  "name": "metalsmith-s3",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwishek/metalsmith-s3.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
 }
